@@ -15,12 +15,15 @@ body {
   margin: 0;
 }
 
-h1 {
+div#headings {
   position: absolute;
   pointer-events: none;
   text-align: center;
   width: 100%;
+}
 
+h1 {
+  margin-bottom: 0.5rem;
   font-family: "Jaro", sans-serif;
   font-optical-sizing: auto;
   font-size: 70px;
@@ -30,6 +33,16 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   text-shadow: 0px 0px 50px #553c9a;
+}
+
+h2 {
+  color: white;
+  font-family: "Jaro", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 14px;
+  margin: 0;
+  text-shadow: 0px 0px 5px #b393d3, 0px 0px 10px #b393d3, 0px 0px 10px #b393d3,
+    0px 0px 20px #b393d3;
 }
 
 #app {

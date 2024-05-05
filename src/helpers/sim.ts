@@ -13,7 +13,7 @@ export function start(cols: number, rows: number, width: number, ctx: CanvasRend
   });
   document.addEventListener("touchend", () => drag = false);
 
-  setInterval(() => grid = draw(grid, cols, rows, width, ctx), 10);
+  setInterval(() => grid = draw(grid, cols, rows, width, ctx), 20);
 }
 
 function mouseDragged(grid: string[][], cols: number, rows: number, width: number, e: TouchEvent) {
