@@ -54,20 +54,15 @@ function main() {
 
   let drag = false;
 
-  // document.addEventListener("mousemove", (e) => {
-  //   e.preventDefault();
-  //   mouseDragged(grid, e);
-  // });
-
-  document.addEventListener("mousedown", () => {
+  document.addEventListener("touchstart", () => {
     drag = true;
 
     console.log("mousedown", drag);
   });
-  document.addEventListener("mousemove", (e) => {
+  document.addEventListener("touchmove", (e) => {
     if (drag) mouseDragged(grid, e);
   });
-  document.addEventListener("mouseup", () => {
+  document.addEventListener("touchend", () => {
     drag = false
     console.log("mouseup", drag)
   });
@@ -75,10 +70,10 @@ function main() {
   setInterval(() => grid = draw(grid, width), 100);
 }
 
-function mouseDragged(grid: string[][], e: MouseEvent) {
+function mouseDragged(grid: string[][], e: TouchEvent) {
   console.log("dragged");
-  let mouseX = e.clientX;
-  let mouseY = e.clientY;
+  let mouseX = e.touches[0].pageX;
+  let mouseY = e.touches[0].pageY;
 
   let mouseCol = Math.floor(mouseX / width);
   let mouseRow = Math.floor(mouseY / width);
