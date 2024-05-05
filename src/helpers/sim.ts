@@ -3,8 +3,6 @@ import { gridInit, withinCols, withinRows } from "./grid";
 
 export function start(cols: number, rows: number, width: number, ctx: CanvasRenderingContext2D) {
   let grid = gridInit(cols, rows);
-  grid[Math.round(cols / 2)][Math.round(rows / 2)] = getColor();
-
   let drag = false;
 
   document.addEventListener("touchstart", () => drag = true);
