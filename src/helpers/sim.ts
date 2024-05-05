@@ -1,4 +1,4 @@
-import { getColor } from "./color";
+import { Colors, getColor } from "./color";
 import { gridInit, withinCols, withinRows } from "./grid";
 
 export function start(cols: number, rows: number, width: number, ctx: CanvasRenderingContext2D) {
@@ -44,7 +44,7 @@ function draw(grid: string[][], cols: number, rows: number, width: number, ctx: 
       if (grid[i][j] != "") {
         ctx.fillStyle = grid[i][j];
       } else {
-        ctx.fillStyle = "#0E1111";
+        ctx.fillStyle = Colors.BLACK;
       }
       ctx.fillRect(width * i, width * j, width, width);
     }
