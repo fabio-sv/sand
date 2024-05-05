@@ -1,11 +1,10 @@
+html {
+  overflow: hidden;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -20,16 +19,21 @@ h1 {
   position: absolute;
   pointer-events: none;
   text-align: center;
-  color: black;
   width: 100%;
+
+  font-family: "Jaro", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 70px;
+  font-weight: 600;
+  background-image: linear-gradient(to right, #553c9a, #da5c14);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: 0px 0px 50px #553c9a;
 }
 
 #app {
   width: full;
   margin: 0;
   text-align: center;
-}
-
-canvas {
-  border: 1px solid black;
 }
